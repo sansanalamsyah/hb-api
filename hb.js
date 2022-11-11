@@ -13,6 +13,9 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-server.listen(6666, () => {
+
+require("./version/v1/constants/routes/display.routes")(app)
+
+server.listen(9999, () => {
     console.log(`Server is running `)
 })

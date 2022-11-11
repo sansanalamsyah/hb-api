@@ -3,7 +3,7 @@ exports.printlog = (data) => {
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var dateTime = date + ' ' + time;
-    console.log(dateTime + " " + data.Cabang + " " + JSON.stringify(data));
+    console.log(dateTime + " " + (data.Cabang ?? "") + " " + JSON.stringify(data));
 }
 
 exports.secret = "best-sansan"
